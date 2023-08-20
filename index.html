@@ -2,12 +2,14 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>2D Map</title>
     <script type="text/javascript" src="https://map.vworld.kr/js/vworldMapInit.js.do?version=2.0&apiKey=D5BE13A5-D3B6-3B15-973C-8B6A5FC4E749&domain="></script>
     <style>
         #vmap, #map {
-            width: 50%;
-            height: 700px;
+            width: 100%;
+            height: 100%;
             float: left;
         }
     </style>
@@ -27,8 +29,8 @@
             <input type="hidden" name="domain" value="http://localhost:8080"> 
             <input type="hidden" name="crs" value="EPSG:3857" />
             <div>
-                <input type="text" id="searchValue" name="query" value="��ž��" style="width: 100px;" />
-                <button type="button" onclick="search()">�˻�</button>
+                <input type="text" id="searchValue" name="query" value="¾ßÅ¾¿ª" style="width: 100px;" />
+                <button type="button" onclick="search()">°Ë»ö</button>
             </div>
         </form>
     </div>
