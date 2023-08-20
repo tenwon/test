@@ -7,17 +7,35 @@
     <script type="text/javascript" src="https://map.vworld.kr/js/vworldMapInit.js.do?version=2.0&apiKey=D5BE13A5-D3B6-3B15-973C-8B6A5FC4E749&domain="></script>
     <style>
         #vmap, #map {
+            MARGIN: 0;
+            PADDING: 0;
             width: 100%;
-            height: 100%;
+            height: 700PX;
+            OVERFLOW: HIDDEN;
+        }
+        #VMAP, #MAP {
+            WIDTH: 100%
+            HEIGHT: 100%
         }
     </style>
 </head>
 <body>
-    <div style="display: flex;">
-        <div id="vmap"></div>
-        <div id="map"></div>
-    </div>
+    <div id="vmap"></div>
 
+    <div>
+        <form id="searchForm" action="#" class="form_data" onsubmit="return false;search();">
+            <input type="hidden" name="page" value="1" />
+            <input type="hidden" name="type" value="PLACE" />
+            <input type="hidden" name="request" value="search" />
+            <input type="hidden" name="apiKey" value="D5BE13A5-D3B6-3B15-973C-8B6A5FC4E749"> 
+            <input type="hidden" name="domain" value="http://localhost:8080"> 
+            <input type="hidden" name="crs" value="EPSG:3857" />
+            <div>
+                <input type="text" id="searchValue" name="query" value="홍익대학교" style="width: 100px;" />
+                <button type="button" onclick="search()">검색</button>
+            </div>
+        </form>
+    </div>
 
     <script>
         vw.ol3.MapOptions = {
@@ -25,10 +43,12 @@
             controlDensity: vw.ol3.DensityType.FULL,
             interactionDensity: vw.ol3.DensityType.BASIC,
             controlsAutoArrange: true,
-            homePosition: {longitude: 126.9784, latitude: 37.5665, altitude: 0, heading: 0, tilt: 60, roll: 0}, // 서울의 좌표
-            initPosition: {longitude: 126.9784, latitude: 37.5665, altitude: 0, heading: 0, tilt: 60, roll: 0}  // 서울의 좌표
+            homePosition: {longitude: 126.9235, latitude: 37.5517, altitude: 0, heading: 0, tilt: 60, roll: 0}, // 홍익대학교의 좌표
+            initPosition: {longitude: 126.9235, latitude: 37.5517, altitude: 0, heading: 0, tilt: 60, roll: 0}  // 홍익대학교의 좌표
         }; 
         let vmap = new vw.ol3.Map("vmap",  vw.ol3.MapOptions); 
     </script>
 </body>
 </html>
+
+
