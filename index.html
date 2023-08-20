@@ -38,15 +38,14 @@
     </div>
 
     <script>
-        vw.ol3.MapOptions = {
+      vw.ol3.MapOptions = {
             basemapType: vw.ol3.BasemapType.GRAPHIC,
             controlDensity: vw.ol3.DensityType.FULL,
             interactionDensity: vw.ol3.DensityType.BASIC,
-            controlsAutoArrange: true,
-            homePosition: {longitude: 126.9235, latitude: 37.5517, altitude: 0, heading: 0, tilt: 60, roll: 0}, // 홍익대학교의 좌표
-            initPosition: {longitude: 126.9235, latitude: 37.5517, altitude: 0, heading: 0, tilt: 60, roll: 0}  // 홍익대학교의 좌표
+            controlsAutoArrange: true
         }; 
         let vmap = new vw.ol3.Map("vmap",  vw.ol3.MapOptions); 
+        vmap.setView([126.9245, 37.5512], 16);
     </script>
 </body>
 </html>
