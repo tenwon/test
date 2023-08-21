@@ -21,22 +21,6 @@
 </head>
 <body>
     <div id="vmap"></div>
-
-    <div>
-        <form id="searchForm" action="#" class="form_data" onsubmit="return false;search();">
-            <input type="hidden" name="page" value="1" />
-            <input type="hidden" name="type" value="PLACE" />
-            <input type="hidden" name="request" value="search" />
-            <input type="hidden" name="apiKey" value="D5BE13A5-D3B6-3B15-973C-8B6A5FC4E749"> 
-            <input type="hidden" name="domain" value="http://localhost:8080"> 
-            <input type="hidden" name="crs" value="EPSG:3857" />
-            <div>
-                <input type="text" id="searchValue" name="query" value="홍익대학교" style="width: 100px;" />
-                <button type="button" onclick="search()">검색</button>
-            </div>
-        </form>
-    </div>
-
 <script>
     vw.ol3.MapOptions = {
         basemapType: vw.ol3.BasemapType.GRAPHIC,
@@ -47,7 +31,6 @@
 
     let vmap = new vw.ol3.Map("vmap", vw.ol3.MapOptions);
     
-    // 홍익대학교의 메카르도 좌표 및 확대 레벨 설정
     vw.ol3.CameraPosition.center = [14129119.77, 4513166.08];
     vw.ol3.CameraPosition.zoom = 17;
     
