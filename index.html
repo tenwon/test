@@ -45,8 +45,12 @@
             controlsAutoArrange: true
         }; 
         let vmap = new vw.ol3.Map("vmap",  vw.ol3.MapOptions); 
-        vmap.setView([126.9245, 37.5512]);
-        vmap.setzoom(15);
+        vmap.setView(new vw.ol3.View({
+    center: [126.9245, 37.5512], // 홍익대학교의 좌표
+    zoom: 16 // 확대 레벨 설정. 이 값을 조절하여 원하는 확대 레벨을 얻을 수 있습니다.
+}));
+
+        
     </script>
 </body>
 </html>
