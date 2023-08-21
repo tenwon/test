@@ -42,10 +42,9 @@
             basemapType: vw.ol3.BasemapType.GRAPHIC,
             controlDensity: vw.ol3.DensityType.FULL,
             interactionDensity: vw.ol3.DensityType.BASIC,
-            controlsAutoArrange: true,
-            InitPosition: {
-                center: [14129119.77, 4513166.08],
-                zoom: 17
+            controlsAutoArrange: true,               
+            initPosition: vw.ol3.CameraPosition.center[4129119.77, 4513166.08],
+            initPosition: vw.ol3.CameraPosition.zoom=17      
             }
       };
         let vmap = new vw.ol3.Map("vmap",  vw.ol3.MapOptions);    
