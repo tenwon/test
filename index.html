@@ -38,15 +38,17 @@
     </div>
 
     <script>
-      vw.ol3.MapOptions = {
-            basemapType: vw.ol3.BasemapType.GRAPHIC,
-            controlDensity: vw.ol3.DensityType.FULL,
-            interactionDensity: vw.ol3.DensityType.BASIC,
-            controlsAutoArrange: true,               
-            initPosition: vw.ol3.CameraPosition.center=[4129119.77, 4513166.08],
-            initPosition: vw.ol3.CameraPosition.zoom=17      
-      };
-        let vmap = new vw.ol3.Map("vmap",  vw.ol3.MapOptions);    
+    vw.ol3.MapOptions = {
+        basemapType: vw.ol3.BasemapType.GRAPHIC,
+        controlDensity: vw.ol3.DensityType.FULL,
+        interactionDensity: vw.ol3.DensityType.BASIC,
+        controlsAutoArrange: true,
+        initPosition: {
+            center: [14129119.77, 4513166.08], // 홍익대학교 메카르도 좌표
+            zoom: 17 // 확대 레벨 설정
+        }
+    };
+    let vmap = new vw.ol3.Map("vmap", vw.ol3.MapOptions);
     </script>
 </body>
 </html>
